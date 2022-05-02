@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Together</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+    
+    <h1>Rock On {{ user.first_name}} {{ user.last_name }}!!!</h1>
+
+    {% for band in user.band %}
+
+    <h3>Band Name: {{ band.name }}</a></h3>
+        
+    {% if user.id == user.id %}
+    <h4>
+        <a href="/band/edit/{{ band.id }}">Edit</a>
+        <a href="/band/delete/{{ band.id }}">Delete</a>
+    </h4>
+    {% endif %}
+   
+    <h4>------------------</h4>
+    {% endfor %}
+    
+</body>
+</html>

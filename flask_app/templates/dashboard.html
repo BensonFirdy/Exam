@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Together</title>
+</head>
+<body>
+    <a href="/band/new"> New Band</a> | <a href="/my_band/{{ user.id }}">My Bands</a> | <a href="/logout">Logout</a>
+    
+    <h1>Rock On {{ user.first_name}} {{ user.last_name }}!!!</h1>
+
+    <h1>All Bands</h1>
+
+    {% for band in all_bands %}
+
+    <h3>Band Name: {{ band.name }}</a></h3>
+    <h3>Founding Member: {{ band.user.first_name }} {{ band.user.last_name }}</h3>
+    <h3>Genre: {{ band.genre }}</h3>
+    
+    {% if user.id == band.user.id %}
+    <h3>
+        <a href="/band/edit/{{ band.id }}">Edit</a>
+        <a href="/band/delete/{{ band.id }}">Delete</a>
+    </h3>
+    
+
+    {% endif %}
+    <h4>------------------</h4>
+    {% endfor %}
+
+
+    
+</body>
+</html>
+
