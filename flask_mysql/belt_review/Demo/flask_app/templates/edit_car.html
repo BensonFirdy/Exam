@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car App</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+    <h1>Edit Car No. {{ one_car.id }}</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %} 
+    {% endif %} 
+    {% endwith %}
+
+    <form action="/car/update/{{ one_car.id }}" method="post">
+        <p>Color:
+            <input type="text" name="color" value="{{ one_car.color }}">
+        </p>
+        <p>Number of Seats:
+            <input type="number" name="num_of_seats" value="{{ one_car.num_of_seats }}">
+        </p>
+        <input type="submit" value="Update Car">
+    </form>
+
+    <a href="/car/delete/{{ one_car.id }}">Delete Car</a>
+
+</body>
+</html>

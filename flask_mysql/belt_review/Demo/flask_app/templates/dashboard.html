@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="/logout">Logout</a>
+
+    <h3>Welcome, {{ user.first_name}}!!</h3>
+    <h1>Need a Ride??</h1>
+
+    {% for car in all_cars %}
+
+    <h3>Color: <a href="/car/show/{{ car.id }}">{{ car.color }}</a></h3>
+    <h3>Number of Seats: {{ car.num_of_seats }}</h3>
+    <h3>Driver: {{ car.driver.first_name }}</h3>
+    {% if user.id == car.driver.id %}
+    <h3>
+        <a href="/car/edit/{{ car.id }}">Edit Car</a>
+        <a href="/car/delete/{{ car.id }}">Delete Car</a>
+    </h3>
+    {% endif %}
+
+    {% endfor %}
+
+
+    <a href="/car/new"> Add a New Car!</a>
+
+
+
+
+
+
+</body>
+</html>

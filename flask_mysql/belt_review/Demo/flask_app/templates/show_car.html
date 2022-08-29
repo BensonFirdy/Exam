@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car App</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+
+    <h1>Here's the Info for Car No. {{ one_car.id }}!!</h1>
+    <h2>Color: {{ one_car.color }}</h2>
+    <h2>Number of Seats: {{ one_car.num_of_seats }}</h2>
+    <h2>Driver: {{ one_car.driver.first_name }}</h2>
+
+    {% if session["user_id"] == one_car.driver.id %}
+    <h4>
+        <a href="/car/edit/{{ one_car.id }}">Edit Car</a>
+        <a href="/car/delete/{{ one_car.id }}">Delete Car</a>
+    </h4>
+    {% endif %}
+
+</body>
+</html>
