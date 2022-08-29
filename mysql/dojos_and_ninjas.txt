@@ -1,0 +1,40 @@
+-- INSERT INTO dojos (first_name, last_name, created_at, updated_at) 
+-- VALUES('Fire', 'House', now(), now());
+-- INSERT INTO dojos (first_name, last_name, created_at, updated_at) 
+-- VALUES('Wind', 'House', now(), now());
+-- INSERT INTO dojos (first_name, last_name, created_at, updated_at) 
+-- VALUES('Water', 'House', now(), now());
+-- Select * FROM dojos
+-- DELETE FROM dojos WHERE id = 1
+-- DELETE FROM dojos WHERE id = 2
+-- DELETE FROM dojos WHERE id = 3
+-- INSERT INTO dojos (first_name, last_name, created_at, updated_at) 
+-- VALUES('Earth', 'House', now(), now());
+-- INSERT INTO dojos (first_name, last_name, created_at, updated_at) 
+-- VALUES('Light', 'House', now(), now());
+-- INSERT INTO dojos (first_name, last_name, created_at, updated_at) 
+-- VALUES('Dark', 'House', now(), now());
+-- Select * FROM dojos
+--  INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Dan', 'Smith', 25, 4, now(), now());
+-- Select * FROM ninjas
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Brian', 'Smith', 26, 4, now(), now());
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Charles', 'Smith', 27, 4, now(), now());
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('George', 'Peter', 25, 5, now(), now());
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Michael', 'Peter', 26, 5, now(), now());
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Nicholas', 'Peter', 27, 5, now(), now());
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Damon', 'Hill', 25, 6, now(), now());
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Russell', 'Hill', 26, 6, now(), now());
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) 
+-- VALUES('Jack', 'Hill', 27, 6, now(), now());
+-- Select * FROM ninjas
+-- Select * from ninjas where Dojo_id = 4
+-- Select * from ninjas where Dojo_id = 6
+-- Select * from ninjas where Dojo_id = 5
